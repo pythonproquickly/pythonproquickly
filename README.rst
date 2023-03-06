@@ -34,7 +34,12 @@ pythonproquickly
 ================
 
 
-    Add a short description here!
+ docker run -d \                                                                                                                                      ─╯
+        --name postgres \
+        -e POSTGRES_PASSWORD=andy \
+        -e PGDATA=/var/lib/postgresql/data/pgdata \
+        -v $(pwd):/var/lib/postgresql/data -p 5432:5432\
+        postgres:15.1-bullseye   Add a short description here!
 
 
 A longer description of your project goes here...
